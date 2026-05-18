@@ -23,6 +23,14 @@ const db = mysql.createConnection({
     ssl: { rejectUnauthorized: false }
 })
 
+db.connect((err) => {
+    if (err) {
+        console.log('Database connection error:', err)
+    } else {
+        console.log('Connected to database!')
+    }
+})
+
 app.post('/add_user', (req, res)=>{
     sql = "INSERT INTO person_details(`name`,`email`, `age`,`job`) VALUES (?,?,?,?)";
     const values = [
