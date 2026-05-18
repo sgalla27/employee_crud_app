@@ -40,7 +40,7 @@ app.post('/add_user', (req, res)=>{
 app.get('/people', (req, res)=>{
     const sql = "SELECT * FROM person_details";
     db.query(sql, (err,result)=>{
-        if(err) res.json({"message":"Server error"})
+        if(err) return res.json({"message":"Server error"})
         return res.json(result);
     });
 });
