@@ -2,6 +2,8 @@
 
 A full-stack CRUD application built with React, Node.js, Express, and MySQL. Features create, read, update, and delete functionality for managing employee records. Deployed with a React frontend on Render, Express REST API backend on Render, and a MySQL database hosted on Aiven.
 
+Live Demo: https://people-crud-app-frontend.onrender.com
+
 
 Homescreen of application with populated employee database
 <img width="959" height="310" alt="image" src="https://github.com/user-attachments/assets/42c89276-a6de-4abe-85a9-cb7fbcdf9b8e" />
