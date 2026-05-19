@@ -26,8 +26,8 @@ function Home(){
     }
 
     return (
-        <div className='container-fluid bg-primary vh-100 vw-100'>
-            <h3>People</h3>
+        <div className='container-fluid vh-100 vw-100' style={{backgroundColor: '#899dff'}}>
+            <h3>Employee Log</h3>
             <div className='d-flex justify-content-end'>
                 <Link className='btn btn-success' to='/create'>Add Person</Link>
             </div>
@@ -38,7 +38,7 @@ function Home(){
                         <th>Name</th>
                         <th>Email</th>
                         <th>Age</th>
-                        <th>Job</th>
+                        <th>Department</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -53,7 +53,7 @@ function Home(){
                                 <td>{person.job}</td>
                                 <td>
                                     <Link className='btn btn-success' to={`/read/${person.id}`}>Read</Link>
-                                    <Link className='btn btn-success' to={`/edit/${person.id}`}>Edit</Link>
+                                    <Link className='btn btn-warning' to={`/edit/${person.id}`}>Edit</Link>
                                     <button onClick={()=>handleDelete(person.id)}className='btn btn-danger' to=''>Delete</button>
                                 </td>
                             </tr>)

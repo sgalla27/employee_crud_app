@@ -13,8 +13,8 @@ function Read(){
         .catch((err)=>console.log(err))
     }, [id]);
     return (
-        <div className='container-fluid bg-primary vh-100 vw-100'>
-            <h1>User {id}</h1>
+        <div className='container-fluid vh-100 vw-100' style={{backgroundColor: '#899dff'}}>
+            <h1>User {id} Details</h1>
             <Link to="/" className="btn btn-success">Back</Link>
             {data.map((person) => {
                 return(
@@ -36,7 +36,7 @@ function Read(){
                             {person["age"]}
                         </li>
                         <li className="list-group-item">
-                            <b>Job: </b>
+                            <b>Department: </b>
                             {person["job"]}
                         </li>
                     </ul>

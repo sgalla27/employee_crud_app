@@ -29,8 +29,8 @@ function Edit(){
     }
 
     return (
-        <div className='container-fluid bg-primary vh-100 vw-100'>
-            <h1>User {id}</h1>
+        <div className='container-fluid vh-100 vw-100' style={{backgroundColor: '#899dff'}}>
+            <h1>User {id} Details</h1>
             <Link to="/" className="btn btn-success">Back</Link>
             {data.map((person) => {
                 return(
@@ -44,14 +44,14 @@ function Edit(){
                         <input value = {person.email} type='email' name='email' className='form-control' required onChange={(e)=> setData([{...data[0], email: e.target.value}])} />
                     </div>
                     <div className='form-group col-md-6 my-3'>
-                        <label htmlFor = 'job'>Job</label>
+                        <label htmlFor = 'job'>Department</label>
                         <input value = {person.job} type='text' name='job' className='form-control' required onChange={(e)=> setData([{...data[0], job: e.target.value}])} />
                     </div>
                     <div className='form-group col-md-6 my-3'>
                         <label htmlFor = 'age'>Age</label>
                         <input value = {person.age} type='number' name='age' className='form-control' required onChange={(e)=> setData([{...data[0], age: e.target.value}])} />
                     </div>
-                    <button type='submit' className='btn btn-success'>Submit</button>
+                    <button type='submit' className='btn btn-success'>Update</button>
                 </form>
                 );
             })}
